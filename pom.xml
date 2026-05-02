@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example.keycloak</groupId>
+    <artifactId>akhq-authz-mapper</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>AKHQ AuthZ Mapper</name>
+    <description>
+        Keycloak script-based OIDC protocol mapper that converts Microsoft Entra ID
+        groups (entra_groups attribute) into the AKHQ "groups" claim format.
+    </description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <!-- Targeted Keycloak version (for documentation only - no compile-time dependency). -->
+        <keycloak.version>26.5.1</keycloak.version>
+    </properties>
+
+    <build>
+        <!-- Drop the version suffix so the artifact is just akhq-authz-mapper.jar -->
+        <finalName>${project.artifactId}</finalName>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+</project>
