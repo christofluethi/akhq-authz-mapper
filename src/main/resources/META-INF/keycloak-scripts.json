@@ -1,0 +1,9 @@
+{
+    "mappers": [
+        {
+            "name": "AKHQ AuthZ Mapper",
+            "fileName": "akhq-authz-mapper.js",
+            "description": "An AKHQ AuthZ mapper for Keycloak"
+        }
+    ]
+}
